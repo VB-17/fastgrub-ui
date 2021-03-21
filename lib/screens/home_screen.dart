@@ -3,6 +3,7 @@ import '../data/data.dart';
 
 import '../widgets/recent_orders.dart';
 import '../widgets/nearby_restaurant.dart';
+import 'cart_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -29,7 +30,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 fontSize: 20.0,
               ),
             ),
-            onPressed: () => {},
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (_) => CartScreen(),
+              ),
+            ),
           ),
         ],
       ),
